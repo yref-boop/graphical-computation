@@ -17,7 +17,12 @@ void display()
     glMatrixMode(GL_MODELVIEW);   // activate object modification
     glLoadIdentity();             // initialize modifications matrix
 
-    // draw
+    glColor3f( 1.0f, 1.0f, 1.0f);
+    glBegin(GL_TRIANGLES);
+        glVertex3f(-1.0f, 0.0f, 0.0f);  // v1
+        glVertex3f(1.0f, 0.0f, 0.0f);   // v2
+        glVertex3f(0.0f, 1.0f, 0.0f);   // v3
+    glEnd();
 
     glutSwapBuffers(); // change buffer
 }
