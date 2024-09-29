@@ -19,7 +19,7 @@ void display()
 
     // draw
 
-    glFlush(); // force render
+    glutSwapBuffers(); // change buffer
 }
 
 void reshape(int w, int h)
@@ -33,7 +33,7 @@ void reshape(int w, int h)
 int main(int argc, char** argv)
 {
     glutInit(&argc, argv); // load mouse & keyboard
-    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB); // initialize framebuffer
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB); // initialize double framebuffer
     glutInitWindowSize(WIDTH, HEIGTH); // set window size
     glutInitWindowPosition(ORIGIN_X, ORIGIN_Y); // set topleft window position
     glutCreateWindow("Hello World");
